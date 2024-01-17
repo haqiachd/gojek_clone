@@ -32,8 +32,12 @@ class GojekImage {
   static final String white3 = '${_dir}white-3.png';
   static final String white4 = '${_dir}white-4.png';
   static final String gopay = '${_dir}gopay.png';
+  static final String gopay_circle = '${_dir}gopay-circle.png';
   static final String gofood = '${_dir}gofood.png';
   static final String gomart = '${_dir}gomart.png';
   static final String tokopedia = '${_dir}tokopedia.png';
   static final String ara = '${_dir}ara.png';
+  static final String gopay_bayar = '${_dir}gopay-bayar.png';
+  static final String gopay_topup = '${_dir}gopay-topup.png';
+  static final String gopay_others = '${_dir}gopay-other.png';
 }
