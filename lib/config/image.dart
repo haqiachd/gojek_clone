@@ -17,6 +17,7 @@ class GojekImage {
   static final String featureGosend = '${_dir}feature-gosend.png';
   static final String featureGoshop = '${_dir}feature-goshop.png';
   static final String featureGotagihan = '${_dir}feature-gotagihan.png';
+  static final String featureOthers = '${_dir}feature-others.png';
   static final String iklan = '${_dir}iklan.png';
   static final String small1 = '${_dir}small-1.png';
   static final String small2 = '${_dir}small-2.png';
