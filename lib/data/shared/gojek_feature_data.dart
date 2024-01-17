@@ -40,14 +40,14 @@ List<GojekFeatureModel> gojekFeature = [
   ),
   GojekFeatureModel(
     title: 'GoShop',
-    icon: GojekImage.featureGoride,
+    icon: GojekImage.featureGoshop,
     width: 52,
     height: 53,
   ),
   GojekFeatureModel(
     title: 'Lainnya',
     icon: GojekImage.featureOthers,
-    width: 46,
-    height: 46,
+    width: 47,
+    height: 47,
   )
 ];
