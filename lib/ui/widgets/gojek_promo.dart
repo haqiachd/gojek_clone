@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:gojek_clone/config/configs.dart';
-import 'package:gojek_clone/data/shared/gojek_promo_data.dart';
+import 'package:gojek_clone/data/models/gojek_promo.dart';
 
 class GojekPromo extends StatelessWidget {
-  const GojekPromo({super.key});
+  final List<GojekPromoModel>? gojekPromo;
+  const GojekPromo({this.gojekPromo});
 
   static double radius = 15;
   static double paddingText = 15;
@@ -12,7 +13,7 @@ class GojekPromo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        ...gojekPromo.map(
+        ...gojekPromo!.map(
           (data) => Container(
             margin: const EdgeInsets.only(left: 15, right: 15),
             width: double.infinity,
