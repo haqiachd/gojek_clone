@@ -30,6 +30,39 @@ List<GoFoodModel> gofoodFirst = [
 
 List<GoFoodModel> gofoodSecond = [
   GoFoodModel(
+    icon: GojekImage.small5,
+    restoName: 'Rocket Chicken, Kertosono 1',
+    category: 'Aneka nasi, Ayam & bebek',
+    star: 4.6,
+  ),
+  GoFoodModel(
+    icon: GojekImage.small4,
+    restoName: 'Seblak Mantan',
+    category: 'Jajanan, Cepat saji',
+    star: 4.5,
+  ),
+  GoFoodModel(
+    icon: GojekImage.small3,
+    restoName: 'Warung Lesehan Mulyo Redjo, Kertosono',
+    category: 'Ayam & Bebek',
+    star: 4.6,
+  ),
+  GoFoodModel(
+    icon: GojekImage.small2,
+    restoName: 'Belikopi, Jombang Kota',
+    category: 'Kopi, Minuman',
+    star: 4.7,
+  ),
+  GoFoodModel(
+    icon: GojekImage.small1,
+    restoName: 'Nasi Goreng Djombang Baru...',
+    category: 'Kopi, Minuman',
+    star: 4.7,
+  ),
+];
+
+List<GoFoodModel> gofoodThird = [
+  GoFoodModel(
     icon: GojekImage.small1,
     restoName: 'Nasi Goreng Djombang Baru...',
     category: 'Kopi, Minuman',

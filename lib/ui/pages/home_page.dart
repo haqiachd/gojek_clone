@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:gojek_clone/config/configs.dart';
+import 'package:gojek_clone/data/models/event_title_model.dart';
 import 'package:gojek_clone/data/shared/gofood_data.dart';
 import 'package:gojek_clone/data/shared/gojek_promo_data.dart';
+import 'package:gojek_clone/data/shared/gomart_data.dart';
 import 'package:gojek_clone/ui/widgets/gofood_resto.dart';
 import 'package:gojek_clone/ui/widgets/gofood_terlaris.dart';
+import 'package:gojek_clone/ui/widgets/gomart_list.dart';
 import 'package:gojek_clone/ui/widgets/tokopedia_promo.dart';
 import 'package:gojek_clone/ui/widgets/widgets.dart';
 
@@ -43,7 +47,19 @@ class HomePage extends StatelessWidget {
             const SizedBox(height: 20),
             GojekPromo(gojekPromo: gojekPromo3),
             const SizedBox(height: 20),
-            GoFoodResto(gofoodlist: gofoodSecond),
+            GoFoodResto(gofoodlist: gofoodThird),
+            const SizedBox(height: 20),
+            GomartList(
+              eventTitle: EventTitleModel(
+                icon: GojekImage.gomart,
+                title: "Belanja di GoMart, Pasti Ada!",
+                deskripsi:
+                    "Butuh apa? di GoMart dianter itungan menit + 24 jam 🛒",
+                haveButton: true,
+                btnTitle: 'Lihat semua',
+              ),
+              list: gomartData,
+            ),
             const SizedBox(height: 20),
           ],
         ),
