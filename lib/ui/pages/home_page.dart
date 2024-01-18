@@ -7,6 +7,7 @@ import 'package:gojek_clone/data/shared/gomart_data.dart';
 import 'package:gojek_clone/ui/widgets/gofood_resto.dart';
 import 'package:gojek_clone/ui/widgets/gofood_terlaris.dart';
 import 'package:gojek_clone/ui/widgets/gomart_list.dart';
+import 'package:gojek_clone/ui/widgets/gopay_list.dart';
 import 'package:gojek_clone/ui/widgets/tokopedia_promo.dart';
 import 'package:gojek_clone/ui/widgets/widgets.dart';
 
@@ -59,6 +60,17 @@ class HomePage extends StatelessWidget {
                 btnTitle: 'Lihat semua',
               ),
               list: gomartData,
+            ),
+            const SizedBox(height: 20),
+            GoPayList(
+              model: EventTitleModel(
+                icon: GojekImage.gopay,
+                iconSize: 15,
+                title: 'Tumbuhkan Saldomu 🥀',
+                deskripsi:
+                    "Upgrage ke Gopay Tabungan & nikmati saldo tumbun 2.5%",
+                contentSpace: 12,
+              ),
             ),
             const SizedBox(height: 20),
           ],
