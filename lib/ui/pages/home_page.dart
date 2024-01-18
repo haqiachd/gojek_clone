@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:gojek_clone/data/shared/gofood_data.dart';
 import 'package:gojek_clone/data/shared/gojek_promo_data.dart';
+import 'package:gojek_clone/ui/widgets/gofood_resto.dart';
+import 'package:gojek_clone/ui/widgets/gofood_terlaris.dart';
 import 'package:gojek_clone/ui/widgets/tokopedia_promo.dart';
 import 'package:gojek_clone/ui/widgets/widgets.dart';
 
@@ -34,7 +37,14 @@ class HomePage extends StatelessWidget {
             const SizedBox(height: 25),
             const TokopediaPromo(),
             const SizedBox(height: 15),
-            GojekPromo(gojekPromo: gojekPromo2)
+            GojekPromo(gojekPromo: gojekPromo2),
+            const SizedBox(height: 20),
+            GoFoodTerlaris(gofoodlist: gofoodSecond),
+            const SizedBox(height: 20),
+            GojekPromo(gojekPromo: gojekPromo3),
+            const SizedBox(height: 20),
+            GoFoodResto(gofoodlist: gofoodSecond),
+            const SizedBox(height: 20),
           ],
         ),
       ),

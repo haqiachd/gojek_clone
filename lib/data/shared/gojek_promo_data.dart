@@ -18,3 +18,12 @@ List<GojekPromoModel> gojekPromo2 = [
         "Gunakan GoPay untuk mentransfer dana dengan cepat dan aman, serta tarik tunai secara praktis.",
   ),
 ];
+
+List<GojekPromoModel> gojekPromo3 = [
+  GojekPromoModel(
+    image: GojekImage.big4,
+    title: "Yuk! Cobain Gojek Sekarang Juga! 🥰",
+    deskripsi:
+        "Rasakan kemudahan dan kenyamanan dalam setiap perjalanan serta berbagai layanan harian.",
+  ),
+];
