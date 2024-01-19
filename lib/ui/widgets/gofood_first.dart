@@ -2,11 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gojek_clone/config/configs.dart';
 import 'package:gojek_clone/data/models/event_title_model.dart';
+import 'package:gojek_clone/data/models/gofood_model.dart';
 import 'package:gojek_clone/data/shared/gofood_data.dart';
 import 'package:gojek_clone/ui/widgets/event_title.dart';
 
 class GoFoodFirst extends StatelessWidget {
-  const GoFoodFirst({super.key});
+  final EventTitleModel? eventTitle;
+  final List<GoFoodModel>? models;
+
+  const GoFoodFirst({
+    required this.eventTitle,
+    required this.models,
+  });
 
   final double radius = 18;
   final double height = 270;
@@ -16,9 +23,13 @@ class GoFoodFirst extends StatelessWidget {
   Widget build(BuildContext context) {
     return EventTitle(
       model: EventTitleModel(
-        title: 'Resto dengan rating jempolan',
-        deskripsi: 'Ad',
-        contentSpace: 19,
+        icon: eventTitle!.icon,
+        iconSize: eventTitle!.iconSize,
+        title: eventTitle!.title,
+        btnTitle: eventTitle!.btnTitle,
+        deskripsi: eventTitle!.deskripsi,
+        haveButton: eventTitle!.haveButton,
+        contentSpace: eventTitle!.contentSpace,
         child: SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Row(

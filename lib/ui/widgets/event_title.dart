@@ -12,7 +12,7 @@ class EventTitle extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
+      children: [ 
         Padding(
           padding: const EdgeInsets.only(left: 15, right: 15),
           child: Row(

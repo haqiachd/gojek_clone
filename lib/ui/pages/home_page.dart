@@ -1,15 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gojek_clone/config/configs.dart';
-import 'package:gojek_clone/data/models/event_title_model.dart';
-import 'package:gojek_clone/data/shared/gofood_data.dart';
-import 'package:gojek_clone/data/shared/gojek_promo_data.dart';
-import 'package:gojek_clone/data/shared/gomart_data.dart';
-import 'package:gojek_clone/ui/widgets/gofood_resto.dart';
-import 'package:gojek_clone/ui/widgets/gofood_terlaris.dart';
-import 'package:gojek_clone/ui/widgets/gomart_list.dart';
-import 'package:gojek_clone/ui/widgets/gopay_list.dart';
-import 'package:gojek_clone/ui/widgets/tokopedia_promo.dart';
+import 'package:gojek_clone/data/models/models.dart';
 import 'package:gojek_clone/ui/widgets/widgets.dart';
+import 'package:gojek_clone/data/shared/shared.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -38,17 +31,44 @@ class HomePage extends StatelessWidget {
             const GojekFeature(),
             GojekPromo(gojekPromo: gojekPromo1),
             const SizedBox(height: 25),
-            const GoFoodFirst(),
+            GoFoodFirst(
+              eventTitle: EventTitleModel(
+                title: 'Resto dengan rating jempolan',
+                deskripsi: 'Ad',
+                contentSpace: 19,
+              ),
+              models: gofoodFirst,
+            ),
             const SizedBox(height: 25),
             const TokopediaPromo(),
             const SizedBox(height: 15),
             GojekPromo(gojekPromo: gojekPromo2),
             const SizedBox(height: 20),
-            GoFoodTerlaris(gofoodlist: gofoodSecond),
+            GoFoodSecond(
+              eventTitle: EventTitleModel(
+                icon: GojekImage.gofood,
+                title: 'Pilihan Terlaris',
+                deskripsi: '',
+                haveButton: true,
+                btnTitle: 'Lihat semua',
+                contentSpace: 10,
+              ),
+              models: gofoodSecond,
+            ),
             const SizedBox(height: 20),
             GojekPromo(gojekPromo: gojekPromo3),
             const SizedBox(height: 20),
-            GoFoodResto(gofoodlist: gofoodThird),
+            GoFoodSecond(
+              eventTitle: EventTitleModel(
+                icon: GojekImage.gofood,
+                title: 'Banyak resto enak, loh!',
+                deskripsi: '',
+                haveButton: true,
+                btnTitle: 'Lihat semua',
+                contentSpace: 10,
+              ),
+              models: gofoodThird,
+            ),
             const SizedBox(height: 20),
             GomartList(
               eventTitle: EventTitleModel(
