@@ -11,91 +11,109 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: PreferredSize(
-        preferredSize:
-            Size.fromHeight(104 - MediaQuery.of(context).padding.top),
-        child: const GojekAppBar(),
+      appBar: null,
+      body: Stack(
+        children: [
+          Positioned(
+            top: 95,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            child: SingleChildScrollView(
+              scrollDirection: Axis.vertical,
+              physics: const ClampingScrollPhysics(),
+              child: _homeContent(),
+            ),
+          ),
+          const Positioned(
+            top: 0,
+            left: 0,
+            right: 0,
+            child: GojekAppBar(),
+          ),
+        ],
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            const SizedBox(
-              height: 245,
-              child: Stack(
-                children: [
-                  GojekHeader(),
-                  GopayMenu(),
-                ],
-              ),
-            ),
-            const GojekFeature(),
-            GojekPromo(gojekPromo: gojekPromo1),
-            const SizedBox(height: 25),
-            GoFoodFirst(
-              eventTitle: EventTitleModel(
-                title: 'Resto dengan rating jempolan',
-                deskripsi: 'Ad',
-                contentSpace: 19,
-              ),
-              models: gofoodFirst,
-            ),
-            const SizedBox(height: 25),
-            const TokopediaPromo(),
-            const SizedBox(height: 15),
-            GojekPromo(gojekPromo: gojekPromo2),
-            const SizedBox(height: 20),
-            GoFoodSecond(
-              eventTitle: EventTitleModel(
-                icon: GojekImage.gofood,
-                title: 'Pilihan Terlaris',
-                deskripsi: '',
-                haveButton: true,
-                btnTitle: 'Lihat semua',
-                contentSpace: 10,
-              ),
-              models: gofoodSecond,
-            ),
-            const SizedBox(height: 20),
-            GojekPromo(gojekPromo: gojekPromo3),
-            const SizedBox(height: 20),
-            GoFoodSecond(
-              eventTitle: EventTitleModel(
-                icon: GojekImage.gofood,
-                title: 'Banyak resto enak, loh!',
-                deskripsi: '',
-                haveButton: true,
-                btnTitle: 'Lihat semua',
-                contentSpace: 10,
-              ),
-              models: gofoodThird,
-            ),
-            const SizedBox(height: 20),
-            GomartList(
-              eventTitle: EventTitleModel(
-                icon: GojekImage.gomart,
-                title: "Belanja di GoMart, Pasti Ada!",
-                deskripsi:
-                    "Butuh apa? di GoMart dianter itungan menit + 24 jam 🛒",
-                haveButton: true,
-                btnTitle: 'Lihat semua',
-              ),
-              list: gomartData,
-            ),
-            const SizedBox(height: 20),
-            GoPayList(
-              model: EventTitleModel(
-                icon: GojekImage.gopay,
-                iconSize: 15,
-                title: 'Tumbuhkan Saldomu 🥀',
-                deskripsi:
-                    "Upgrage ke Gopay Tabungan & nikmati saldo tumbun 2.5%",
-                contentSpace: 12,
-              ),
-            ),
-            const SizedBox(height: 20),
-          ],
+    );
+  }
+
+  Widget _homeContent() {
+    return Column(
+      children: [
+        const SizedBox(
+          height: 237,
+          child: Stack(
+            children: [
+              GojekHeader(),
+              GopayMenu(),
+            ],
+          ),
         ),
-      ),
+        const SizedBox(height: 20),
+        const GojekFeature(),
+        const SizedBox(height: 15),
+        GojekPromo(gojekPromo: gojekPromo1),
+        const SizedBox(height: 25),
+        GoFoodFirst(
+          eventTitle: EventTitleModel(
+            title: 'Resto dengan rating jempolan',
+            deskripsi: 'Ad',
+            contentSpace: 19,
+          ),
+          models: gofoodFirst,
+        ),
+        const SizedBox(height: 25),
+        const TokopediaPromo(),
+        const SizedBox(height: 15),
+        GojekPromo(gojekPromo: gojekPromo2),
+        const SizedBox(height: 20),
+        GoFoodSecond(
+          eventTitle: EventTitleModel(
+            icon: GojekImage.gofood,
+            title: 'Pilihan Terlaris',
+            deskripsi: '',
+            haveButton: true,
+            btnTitle: 'Lihat semua',
+            contentSpace: 10,
+          ),
+          models: gofoodSecond,
+        ),
+        const SizedBox(height: 20),
+        GojekPromo(gojekPromo: gojekPromo3),
+        const SizedBox(height: 20),
+        GoFoodSecond(
+          eventTitle: EventTitleModel(
+            icon: GojekImage.gofood,
+            title: 'Banyak resto enak, loh!',
+            deskripsi: '',
+            haveButton: true,
+            btnTitle: 'Lihat semua',
+            contentSpace: 10,
+          ),
+          models: gofoodThird,
+        ),
+        const SizedBox(height: 20),
+        GomartList(
+          eventTitle: EventTitleModel(
+            icon: GojekImage.gomart,
+            title: "Belanja di GoMart, Pasti Ada!",
+            deskripsi: "Butuh apa? di GoMart dianter itungan menit + 24 jam 🛒",
+            haveButton: true,
+            btnTitle: 'Lihat semua',
+          ),
+          list: gomartData,
+        ),
+        const SizedBox(height: 20),
+        GoPayList(
+          model: EventTitleModel(
+            icon: GojekImage.gopay,
+            iconSize: 15,
+            title: 'Tumbuhkan Saldomu 🥀',
+            deskripsi: "Upgrage ke Gopay Tabungan & nikmati saldo tumbun 2.5%",
+            contentSpace: 12,
+          ),
+        ),
+        const SizedBox(height: 20),
+      ],
     );
   }
 }

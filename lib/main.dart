@@ -28,6 +28,9 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(
           seedColor: GojekColor.hex_097210,
         ),
+        appBarTheme: const AppBarTheme(
+          surfaceTintColor: Colors.white,
+        ),
         useMaterial3: true,
       ),
       home: const HomePage(),

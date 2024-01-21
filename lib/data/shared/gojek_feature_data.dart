@@ -47,7 +47,7 @@ List<GojekFeatureModel> gojekFeature = [
   GojekFeatureModel(
     title: 'Lainnya',
     icon: GojekImage.featureOthers,
-    width: 47,
-    height: 47,
+    width: 45,
+    height: 45,
   )
 ];

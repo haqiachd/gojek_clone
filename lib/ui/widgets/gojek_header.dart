@@ -7,12 +7,15 @@ class GojekHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Positioned(
-      top: -16,
+      top: 0,
       left: 0,
       right: 0,
       child: Image.asset(
         GojekImage.iklan,
-        height: 216,
+        width: double.infinity,
+        height: 200,
+        fit: BoxFit.cover,
+        filterQuality: FilterQuality.high,
       ),
     );
   }

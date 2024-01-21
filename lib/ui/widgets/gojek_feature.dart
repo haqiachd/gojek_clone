@@ -11,42 +11,44 @@ class GojekFeature extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.only(left: 22, right: 22),
       width: double.infinity,
-      height: 200,
-      child: GridView.count(
-        crossAxisCount: 4,
-        mainAxisSpacing: 8,
-        physics: const NeverScrollableScrollPhysics(),
-        children: [
-          ...gojekFeature.map(
-            (data) => Container(
-              margin: const EdgeInsets.only(left: 3.5, right: 3.5),
-              width: 82,
-              height: 77,
-              color: Colors.white,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  SizedBox(
-                    height: 57,
-                    child: Image.asset(
-                      data.icon!,
-                      width: data.width,
-                      height: data.height,
-                      fit: BoxFit.contain,
+      color: Colors.white,
+      child: Wrap(
+        alignment: WrapAlignment.center,
+        spacing: 4, // Spasi antar item
+        runSpacing: 10, // Spasi antar baris
+        children: gojekFeature
+            .map(
+              (data) => Container(
+                width: 82,
+                height: 77,
+                color: Colors.white,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SizedBox(
+                      height: 57,
+                      child: Image.asset(
+                        data.icon!,
+                        width: data.width,
+                        height: data.height,
+                        fit: BoxFit.contain,
+                      ),
                     ),
-                  ),
-                  const SizedBox(height: 2),
-                  Text(
-                    data.title!,
-                    style: GojekTypography.regular12_5.copyWith(
-                      color: GojekColor.hex_4A4A4A,
-                    ),
-                  )
-                ],
+                    const SizedBox(height: 2),
+                    Align(
+                      alignment: Alignment.bottomCenter,
+                      child: Text(
+                        data.title!,
+                        style: GojekTypography.regular12_5.copyWith(
+                          color: GojekColor.hex_4A4A4A,
+                        ),
+                      ),
+                    )
+                  ],
+                ),
               ),
-            ),
-          )
-        ],
+            )
+            .toList(),
       ),
     );
   }
