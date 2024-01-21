@@ -4,6 +4,7 @@ class GopayMenuModel {
   double? width;
   double? height;
   bool? indicator;
+  int? indicatorValues;
   double? radius;
 
   GopayMenuModel({
@@ -12,6 +13,7 @@ class GopayMenuModel {
     this.width,
     this.height,
     this.indicator,
+    this.indicatorValues,
     this.radius,
   });
 }

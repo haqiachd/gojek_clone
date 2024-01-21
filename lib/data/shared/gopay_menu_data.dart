@@ -8,6 +8,7 @@ List<GopayMenuModel> gopayMenu = [
     width: 10,
     height: 10,
     indicator: false,
+    indicatorValues: 2,
     radius: 6,
   ),
   GopayMenuModel(
@@ -16,14 +17,16 @@ List<GopayMenuModel> gopayMenu = [
     width: 10,
     height: 10,
     indicator: false,
+    indicatorValues: 3,
     radius: 6,
   ),
   GopayMenuModel(
-    title: 'Bayar',
+    title: 'Lainnya',
     icon: GojekImage.gopay_others,
     width: 10,
     height: 3,
     indicator: true,
+    indicatorValues: 3,
     radius: 20,
   )
 ];

@@ -48,61 +48,69 @@ class GopayMenu extends StatelessWidget {
                 ),
               ),
               const SizedBox(width: 6),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  SizedBox(
-                    width: 100,
-                    child: Text(
-                      'Rp15.000',
-                      style: GojekTypography.bold14,
+              Expanded(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SizedBox(
+                      width: 100,
+                      child: Text(
+                        'Rp15.000',
+                        style: GojekTypography.bold14,
+                      ),
                     ),
-                  ),
-                  SizedBox(
-                    width: 100,
-                    child: Text(
-                      '0 coins',
-                      style: GojekTypography.regular14,
-                    ),
-                  )
-                ],
+                    SizedBox(
+                      width: 100,
+                      child: Text(
+                        '0 coins',
+                        style: GojekTypography.regular14,
+                      ),
+                    )
+                  ],
+                ),
               ),
-              const SizedBox(width: 40),
               ...gopayMenu.map(
-                (data) => SizedBox(
+                (data) => Container(
                   width: 50,
                   height: 60,
+                  color: Colors.white,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Container(
-                        width: 20,
-                        height: 20,
-                        decoration: BoxDecoration(
-                          color: GojekColor.hex_00B2DA,
-                          borderRadius: BorderRadius.circular(data.radius!),
-                        ),
+                      const SizedBox(height: 6),
+                      Expanded(
                         child: Stack(
                           children: [
                             Center(
-                              child: SizedBox(
-                                width: data.width,
-                                height: data.height,
-                                child: Image.asset(
-                                  data.icon!,
-                                  fit: BoxFit.fill,
+                              child: Container(
+                                width: 20,
+                                height: 20,
+                                decoration: BoxDecoration(
+                                  color: GojekColor.hex_00B2DA,
+                                  borderRadius:
+                                      BorderRadius.circular(data.radius!),
+                                ),
+                                child: Center(
+                                  child: SizedBox(
+                                    width: data.width,
+                                    height: data.height,
+                                    child: Image.asset(
+                                      data.icon!,
+                                      fit: BoxFit.fill,
+                                    ),
+                                  ),
                                 ),
                               ),
                             ),
                             Visibility(
                               visible: data.indicator!,
                               child: Positioned(
-                                right: -3,
-                                top: -3,
+                                right: 10,
+                                top: 0,
                                 child: SizedBox(
-                                  width: 14,
-                                  height: 14,
+                                  width: 15,
+                                  height: 15,
                                   child: Material(
                                     color: Colors.white,
                                     shape: const CircleBorder(),
@@ -111,14 +119,16 @@ class GopayMenu extends StatelessWidget {
                                         width: 13,
                                         height: 13,
                                         child: Material(
-                                          color: Colors.red,
+                                          color: GojekColor.hex_F41E2A,
                                           shape: const CircleBorder(),
                                           child: Center(
                                             child: Text(
-                                              '2',
-                                              style: GojekTypography.regular12_5
+                                              '${data.indicatorValues}',
+                                              textAlign: TextAlign.center,
+                                              style: GojekTypography
+                                                  .semibold12_5
                                                   .copyWith(
-                                                fontSize: 8,
+                                                fontSize: 10,
                                                 color: Colors.white,
                                               ),
                                             ),
@@ -133,15 +143,16 @@ class GopayMenu extends StatelessWidget {
                           ],
                         ),
                       ),
-                      const SizedBox(height: 2),
                       Text(
                         data.title!,
                         style: GojekTypography.regular12_5,
-                      )
+                      ),
+                      const SizedBox(height: 8),
                     ],
                   ),
                 ),
-              )
+              ),
+              const SizedBox(width: 8),
             ],
           ),
         ),

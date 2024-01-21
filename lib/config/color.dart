@@ -35,4 +35,5 @@ class GojekColor {
   static Color hex_E0FFE0 = const Color(0xFFE0FFE0);
   static Color hex_046417 = const Color(0xFF046417);
   static Color hex_474948 = const Color(0xFF474948);
+  static Color hex_F41E2A = const Color(0xFFF41E2A);
 }
