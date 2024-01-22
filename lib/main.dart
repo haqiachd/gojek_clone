@@ -31,6 +31,10 @@ class MyApp extends StatelessWidget {
         appBarTheme: const AppBarTheme(
           surfaceTintColor: Colors.white,
         ),
+        bottomNavigationBarTheme: BottomNavigationBarThemeData(
+          unselectedLabelStyle: GojekTypography.bold14,
+          selectedLabelStyle: GojekTypography.bold14,
+        ),
         useMaterial3: true,
       ),
       home: const HomePage(),

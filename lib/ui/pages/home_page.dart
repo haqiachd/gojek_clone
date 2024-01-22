@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gojek_clone/config/configs.dart';
 import 'package:gojek_clone/data/models/models.dart';
+import 'package:gojek_clone/data/shared/bottom_nav_data.dart';
 import 'package:gojek_clone/ui/widgets/widgets.dart';
 import 'package:gojek_clone/data/shared/shared.dart';
 
@@ -32,6 +33,48 @@ class HomePage extends StatelessWidget {
             child: GojekAppBar(),
           ),
         ],
+      ),
+      bottomNavigationBar: Container(
+        decoration: BoxDecoration(
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withOpacity(0.2),
+              spreadRadius: 2,
+              blurRadius: 5,
+              offset: const Offset(0, -1),
+            ),
+          ],
+        ),
+        child: BottomAppBar(
+          color: Colors.white,
+          surfaceTintColor: Colors.white,
+          child: Row(
+            children: [
+              ...bottomNavData.map(
+                (data) => Expanded(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      SizedBox(
+                        width: 30,
+                        height: 30,
+                        child: Center(
+                          child: Image.asset(
+                            data.icon!,
+                            width: data.width,
+                            height: data.height,
+                          ),
+                        ),
+                      ),
+                      Text(data.label!),
+                    ],
+                  ),
+                ),
+              )
+            ],
+          ),
+        ),
       ),
     );
   }

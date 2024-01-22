@@ -41,4 +41,13 @@ class GojekImage {
   static final String gopay_bayar = '${_dir}gopay-bayar.png';
   static final String gopay_topup = '${_dir}gopay-topup.png';
   static final String gopay_others = '${_dir}gopay-other.png';
+  static final String bottom_home = '${_dir}bottomnav-home.png';
+  static final String bottom_promo = '${_dir}bottomnav-promo.png';
+  static final String bottom_pesanan = '${_dir}bottomnav-pesanan.png';
+  static final String bottom_chat = '${_dir}bottomnav-chat.png';
+  static final String bottom_home_active = '${_dir}bottomnav-home-active.png';
+  static final String bottom_promo_active = '${_dir}bottomnav-promo-active.png';
+  static final String bottom_pesanan_active =
+      '${_dir}bottomnav-pesanan-active.png';
+  static final String bottom_chat_active = '${_dir}bottomnav-chat-active.png';
 }

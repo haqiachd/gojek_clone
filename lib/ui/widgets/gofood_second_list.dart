@@ -30,10 +30,10 @@ class GoFoodSecond extends StatelessWidget {
             scrollDirection: Axis.horizontal,
             child: Row(
               children: [
-                const SizedBox(width: 10),
+                const SizedBox(width: 9),
                 ...models!.map(
                   (data) => Container(
-                    margin: const EdgeInsets.only(left: 10, right: 10),
+                    margin: const EdgeInsets.only(left: 9, right: 9),
                     width: 145,
                     height: 257,
                     decoration: BoxDecoration(
@@ -114,7 +114,7 @@ class GoFoodSecond extends StatelessWidget {
                     ),
                   ),
                 ),
-                const SizedBox(width: 10),
+                const SizedBox(width: 9),
               ],
             ),
           )),

@@ -56,15 +56,15 @@ class GopayMenu extends StatelessWidget {
                     SizedBox(
                       width: 100,
                       child: Text(
-                        'Rp15.000',
-                        style: GojekTypography.bold14,
+                        'Rp20.000.000',
+                        style: GojekTypography.bold14.copyWith(fontSize: 13.5),
                       ),
                     ),
                     SizedBox(
                       width: 100,
                       child: Text(
-                        '0 coins',
-                        style: GojekTypography.regular14,
+                        '10.000 coins',
+                        style: GojekTypography.regular14.copyWith(fontSize: 13),
                       ),
                     )
                   ],
