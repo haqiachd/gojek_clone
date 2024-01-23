@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gojek_clone/config/configs.dart';
 import 'package:gojek_clone/data/models/event_title_model.dart';
 import 'package:gojek_clone/data/models/gomart_model.dart';
-import 'package:gojek_clone/ui/widgets/event_title.dart';
+import 'package:gojek_clone/ui/widgets/main/main.dart';
 
 class GomartList extends StatelessWidget {
   final EventTitleModel? eventTitle;

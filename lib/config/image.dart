@@ -28,10 +28,14 @@ class GojekImage {
   static final String small7 = '${_dir}small-7.png';
   static final String small8 = '${_dir}small-8.png';
   static final String small9 = '${_dir}small-9.png';
+  static final String small10 = '${_dir}small-10.png';
   static final String white1 = '${_dir}white-1.png';
   static final String white2 = '${_dir}white-2.png';
   static final String white3 = '${_dir}white-3.png';
   static final String white4 = '${_dir}white-4.png';
+  static final String white5 = '${_dir}white-5.png';
+  static final String white6 = '${_dir}white-6.png';
+  static final String white7 = '${_dir}white-7.png';
   static final String gopay = '${_dir}gopay.png';
   static final String gopay_circle = '${_dir}gopay-circle.png';
   static final String gofood = '${_dir}gofood.png';

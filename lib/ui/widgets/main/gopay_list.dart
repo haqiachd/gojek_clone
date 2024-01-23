@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gojek_clone/data/models/event_title_model.dart';
 import 'package:gojek_clone/data/models/gopay_model.dart';
 import 'package:gojek_clone/data/shared/gopay_data.dart';
-import 'package:gojek_clone/ui/widgets/event_title.dart';
+import 'package:gojek_clone/ui/widgets/main/main.dart';
 
 class GoPayList extends StatelessWidget {
   final EventTitleModel? model;

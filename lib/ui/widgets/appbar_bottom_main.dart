@@ -12,8 +12,8 @@ class GojekBottomAppbar extends StatelessWidget {
         boxShadow: [
           BoxShadow(
             color: Colors.grey.withOpacity(0.1),
-            spreadRadius: 0,
-            blurRadius: 3,
+            spreadRadius: 3,
+            blurRadius: 2,
             offset: const Offset(0, -1),
           ),
         ],

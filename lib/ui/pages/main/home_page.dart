@@ -1,54 +1,35 @@
 import 'package:flutter/material.dart';
 import 'package:gojek_clone/config/configs.dart';
 import 'package:gojek_clone/data/models/models.dart';
-import 'package:gojek_clone/ui/widgets/appbar_bottom.dart';
 import 'package:gojek_clone/ui/widgets/widgets.dart';
 import 'package:gojek_clone/data/shared/shared.dart';
+import 'package:gojek_clone/utils/utils.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    print(MediaQuery.of(context).size.width);
-    print(MediaQuery.of(context).size.height);
-    return Scaffold(
-      backgroundColor: Colors.white,
-      appBar: null,
-      body: Stack(
-        children: [
-          Positioned(
-            top: 95,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            child: SingleChildScrollView(
-              scrollDirection: Axis.vertical,
-              physics: const ClampingScrollPhysics(),
-              child: _homeContent(context),
-            ),
+    return Stack(
+      children: [
+        Positioned(
+          top: 95,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          child: SingleChildScrollView(
+            scrollDirection: Axis.vertical,
+            physics: const ClampingScrollPhysics(),
+            child: _homeContent(context),
           ),
-          const Positioned(
-            top: 0,
-            left: 0,
-            right: 0,
-            child: GojekAppBar(),
-          ),
-        ],
-      ),
-      bottomNavigationBar: Container(
-        decoration: BoxDecoration(
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black.withOpacity(0.2),
-              spreadRadius: 2,
-              blurRadius: 5,
-              offset: const Offset(0, -1),
-            ),
-          ],
         ),
-        child: const GojekBottomAppbar(),
-      ),
+        const Positioned(
+          top: 0,
+          left: 0,
+          right: 0,
+          child: GojekAppBar(),
+        ),
+      ],
     );
   }
 
@@ -79,7 +60,7 @@ class HomePage extends StatelessWidget {
             deskripsi: 'Ad',
             contentSpace: 19,
           ),
-          models: gofoodFirst,
+          models: Utils.shuffleList(gofoodData),
         ),
         const SizedBox(height: 25),
         const TokopediaPromo(),
@@ -95,7 +76,7 @@ class HomePage extends StatelessWidget {
             btnTitle: 'Lihat semua',
             contentSpace: 10,
           ),
-          models: gofoodSecond,
+          models: Utils.shuffleList(gofoodData),
         ),
         const SizedBox(height: 20),
         GojekPromo(gojekPromo: gojekPromo3),
@@ -109,7 +90,7 @@ class HomePage extends StatelessWidget {
             btnTitle: 'Lihat semua',
             contentSpace: 10,
           ),
-          models: gofoodThird,
+          models: Utils.shuffleList(gofoodData),
         ),
         const SizedBox(height: 20),
         GomartList(
@@ -120,7 +101,7 @@ class HomePage extends StatelessWidget {
             haveButton: true,
             btnTitle: 'Lihat semua',
           ),
-          list: gomartData,
+          list: Utils.shuffleList(gomartData),
         ),
         const SizedBox(height: 20),
         GoPayList(
