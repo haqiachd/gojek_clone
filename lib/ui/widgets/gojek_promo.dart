@@ -15,7 +15,10 @@ class GojekPromo extends StatelessWidget {
       children: [
         ...gojekPromo!.map(
           (data) => Container(
-            margin: const EdgeInsets.only(left: 15, right: 15),
+            margin: EdgeInsets.only(
+              left: MediaQuery.of(context).size.width / 26.133,
+              right: MediaQuery.of(context).size.width / 26.133,
+            ),
             width: double.infinity,
             decoration: BoxDecoration(
               color: Colors.white,
@@ -38,11 +41,15 @@ class GojekPromo extends StatelessWidget {
                   ),
                   child: Image.asset(
                     data.image!,
-                    height: 180,
+                    width: double.infinity,
+                    height: MediaQuery.of(context).size.height >=
+                            MediaQuery.of(context).size.width
+                        ? MediaQuery.of(context).size.width / 2.152
+                        : MediaQuery.of(context).size.width / 4.576,
                     fit: BoxFit.cover,
                   ),
                 ),
-                const SizedBox(height: 25),
+                const SizedBox(height: 16),
                 Padding(
                   padding: EdgeInsets.only(
                     right: paddingText,
@@ -67,7 +74,7 @@ class GojekPromo extends StatelessWidget {
                     ),
                   ),
                 ),
-                const SizedBox(height: 25),
+                const SizedBox(height: 16),
               ],
             ),
           ),

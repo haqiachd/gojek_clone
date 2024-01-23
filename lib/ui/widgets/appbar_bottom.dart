@@ -11,9 +11,9 @@ class GojekBottomAppbar extends StatelessWidget {
       decoration: BoxDecoration(
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.2),
-            spreadRadius: 2,
-            blurRadius: 5,
+            color: Colors.grey.withOpacity(0.1),
+            spreadRadius: 0,
+            blurRadius: 3,
             offset: const Offset(0, -1),
           ),
         ],
@@ -32,7 +32,7 @@ class GojekBottomAppbar extends StatelessWidget {
               curve: Curves.elasticOut,
               child: Container(
                 width: _getWithContent(context),
-                height: 4,
+                height: 4.5,
                 decoration: BoxDecoration(
                   color: GojekColor.hex_008600,
                   borderRadius: const BorderRadius.only(
@@ -43,7 +43,7 @@ class GojekBottomAppbar extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: 4,
+              top: 4.5,
               child: Row(
                 children: [
                   ...bottomNavData.map(

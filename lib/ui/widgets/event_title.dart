@@ -12,10 +12,11 @@ class EventTitle extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
-      children: [ 
+      children: [
         Padding(
           padding: const EdgeInsets.only(left: 15, right: 15),
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Column(
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -33,8 +34,8 @@ class EventTitle extends StatelessWidget {
                   const SizedBox(height: 5),
                   SizedBox(
                     width: (model!.haveButton)
-                        ? 230
-                        : MediaQuery.of(context).size.width - 100,
+                        ? MediaQuery.of(context).size.width / 1.704
+                        : MediaQuery.of(context).size.width - 30,
                     child: Text(
                       model!.title.toString(),
                       maxLines: 1,
@@ -44,8 +45,8 @@ class EventTitle extends StatelessWidget {
                   const SizedBox(height: 5),
                   SizedBox(
                     width: (model!.haveButton)
-                        ? 230
-                        : MediaQuery.of(context).size.width - 100,
+                        ? MediaQuery.of(context).size.width / 1.704
+                        : MediaQuery.of(context).size.width - 30,
                     child: Text(
                       model!.deskripsi.toString(),
                       maxLines: 2,

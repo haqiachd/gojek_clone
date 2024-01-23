@@ -13,7 +13,7 @@ class GojekHeader extends StatelessWidget {
       child: Image.asset(
         GojekImage.iklan,
         width: double.infinity,
-        height: 200,
+        height: MediaQuery.of(context).size.height / 4.165,
         fit: BoxFit.cover,
         filterQuality: FilterQuality.high,
       ),

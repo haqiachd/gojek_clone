@@ -8,7 +8,7 @@ class GopayMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Positioned(
-      top: 177,
+      top: MediaQuery.of(context).size.height / 4.7062,
       left: 0,
       right: 0,
       child: Container(

@@ -19,8 +19,14 @@ class TokopediaPromo extends StatelessWidget {
           haveButton: false,
           contentSpace: 14,
           child: Container(
-            margin: const EdgeInsets.only(left: 15, right: 0),
-            height: 174,
+            margin: EdgeInsets.only(
+              left: MediaQuery.of(context).size.width / 26.133,
+              right: 0,
+            ),
+            height: MediaQuery.of(context).size.height >=
+                    MediaQuery.of(context).size.width
+                ? MediaQuery.of(context).size.height / 4.787
+                : MediaQuery.of(context).size.height / 2.252,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(25),
               boxShadow: [

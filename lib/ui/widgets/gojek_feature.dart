@@ -15,11 +15,15 @@ class GojekFeature extends StatelessWidget {
       child: Wrap(
         alignment: WrapAlignment.center,
         spacing: 4, // Spasi antar item
-        runSpacing: 10, // Spasi antar baris
+        runSpacing: MediaQuery.of(context).size.height >
+                MediaQuery.of(context).size.width
+            ? 10
+            : 50, // Spasi antar baris
         children: gojekFeature
             .map(
               (data) => Container(
-                width: 82,
+                // width: 82,
+                width: ((MediaQuery.of(context).size.width).toInt() - 56) / 4,
                 height: 77,
                 color: Colors.white,
                 child: Column(

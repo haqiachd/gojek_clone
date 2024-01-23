@@ -10,6 +10,8 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print(MediaQuery.of(context).size.width);
+    print(MediaQuery.of(context).size.height);
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: null,
@@ -23,7 +25,7 @@ class HomePage extends StatelessWidget {
             child: SingleChildScrollView(
               scrollDirection: Axis.vertical,
               physics: const ClampingScrollPhysics(),
-              child: _homeContent(),
+              child: _homeContent(context),
             ),
           ),
           const Positioned(
@@ -50,12 +52,16 @@ class HomePage extends StatelessWidget {
     );
   }
 
-  Widget _homeContent() {
+  Widget _homeContent(BuildContext context) {
     return Column(
       children: [
-        const SizedBox(
-          height: 237,
-          child: Stack(
+        SizedBox(
+          // height: 237,
+          height: MediaQuery.of(context).size.height >=
+                  MediaQuery.of(context).size.width
+              ? MediaQuery.of(context).size.height / 3.514
+              : MediaQuery.of(context).size.height / 2.670,
+          child: const Stack(
             children: [
               GojekHeader(),
               GopayMenu(),
