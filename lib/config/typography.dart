@@ -69,4 +69,10 @@ class GojekTypography {
     fontSize: 18,
     letterSpacing: -0.5,
   );
+
+  /// SF Pro Display Bold 24
+  static final TextStyle bold24 = bold18.copyWith(
+    fontSize: 24,
+    letterSpacing: -0.2,
+  );
 }
