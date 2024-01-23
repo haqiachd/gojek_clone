@@ -8,6 +8,7 @@ List<BottomNavModel> bottomNavData = [
     activeIcon: GojekImage.bottom_home_active,
     width: 25,
     height: 25,
+    numOfPos: 0,
   ),
     BottomNavModel(
     label: 'Promo',
@@ -15,6 +16,7 @@ List<BottomNavModel> bottomNavData = [
     activeIcon: GojekImage.bottom_promo_active,
     width: 25,
     height: 25,
+    numOfPos: 1,
   ),
     BottomNavModel(
     label: 'Pesanan',
@@ -22,6 +24,7 @@ List<BottomNavModel> bottomNavData = [
     activeIcon: GojekImage.bottom_pesanan_active,
     width: 25,
     height: 25,
+    numOfPos: 2,
   ),
     BottomNavModel(
     label: 'Chat',
@@ -29,5 +32,6 @@ List<BottomNavModel> bottomNavData = [
     activeIcon: GojekImage.bottom_chat_active,
     width: 25,
     height: 25,
+    numOfPos: 3,
   )
 ];

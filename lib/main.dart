@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:gojek_clone/config/configs.dart';
 import 'package:gojek_clone/ui/pages/pages.dart';
+import 'package:gojek_clone/ui/pages/test_page.dart';
 
 void main() {
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);

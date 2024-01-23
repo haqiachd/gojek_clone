@@ -7,4 +7,4 @@ export 'gojek_promo.dart' show GojekPromoModel;
 export 'gomart_model.dart' show GoMartModel;
 export 'gopay_menu_model.dart' show GopayMenuModel;
 export 'gopay_model.dart' show GoPayModel;
-export 'bottom_nav_model.dart' show BottomNavModel;
+export 'bottom_nav_model.dart';
