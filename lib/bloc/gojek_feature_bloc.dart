@@ -63,7 +63,7 @@ class GojekFeatureBloc extends Bloc<GojekFeatureEvent, Widget> {
       default:
         _widget = GojekFeaturePage(
           title: 'error',
-          icon: GojekImage.ara,
+          icon: GojekImage.hitler,
         );
         break;
     }

@@ -6,7 +6,7 @@ class GojekAppBar extends StatelessWidget {
   const GojekAppBar({Key? key}) : super(key: key);
 
   final double radius = 15;
-  
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -85,7 +85,8 @@ class GojekAppBar extends StatelessWidget {
                                   height: 41.5,
                                   child: CircleAvatar(
                                     backgroundColor: Colors.grey,
-                                    backgroundImage: AssetImage(GojekImage.ara),
+                                    backgroundImage:
+                                        AssetImage(GojekImage.hitler),
                                   ),
                                 ),
                                 const Positioned(

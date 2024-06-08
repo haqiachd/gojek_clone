@@ -4,6 +4,7 @@ import 'package:gojek_clone/config/configs.dart';
 import 'package:gojek_clone/ui/pages/main/main_page.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(
